@@ -1,0 +1,4 @@
+venv
+.vscode
+backend/actions/__pycache__
+backend/models

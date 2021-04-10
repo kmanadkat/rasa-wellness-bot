@@ -1,2 +1,3 @@
-rasa run actions
-rasa run --endpoints endpoints.yml --port 5005 --credentials credentials.yml --cors "*"
+## Rasa v2.4.x Wellness ChatBot
+
+- Rasa chatbot related files are present in `backend` directory.

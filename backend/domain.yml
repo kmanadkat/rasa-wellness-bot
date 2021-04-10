@@ -1,25 +1,43 @@
 version: '2.0'
 
-actions:
-  - utter_diet_info
-  - utter_greet
-  - utter_stress_info
-
 intents:
-  - ask_eat_healthy
-  - ask_lower_stress
   - greet
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
-  - ask_exercise
+  - inform
+  - out_of_scope
+  - thankyou
+
+slots:
+  confirm_exercise:
+    type: bool
+    influence_conversation: false
+  exercise:
+    type: text
+    influence_conversation: false
+  sleep:
+    type: text
+    influence_conversation: false
+  diet:
+    type: text
+    influence_conversation: false
+  stress:
+    type: text
+    influence_conversation: false
+  goal:
+    type: text
+    influence_conversation: false
+
+entities:
+  - exercise
+  - sleep
+  - stress
 
 responses:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hi! It's time for your daily wellness check. Tracking healthy habits is a great way to measure your progress over time. Would you like to answer few questions about your health?
 
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
@@ -35,16 +53,75 @@ responses:
   - text: Bye
 
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: I am just another bot trying to help you.
 
-  utter_stress_info:
-  - text: It's ok to feel overwhelmed at times. Try to set realistic expectations and exercise time management techniques, like divinding large tasks inot more manageble peices. Relaxation techniques, like deep breathing and medidation, can also be benficial.
+  utter_ask_confirm_exercise:
+  - text: Did you exercise yesterday? Don't sweat it if you didn't run a marathon - walks count!
 
-  utter_exercise_info:
-  - text: Most healthy adults should aim to get about 150 min of moderate exercise per week. This includes activities like a brisk walk or yard work.
+  utter_ask_sleep:
+  - text: How much sleep did you get 💤 last night?
 
-  utter_diet_info:
-  - text: A healthy diet includes fruits and vegetables, whole grains, dairy, lean protein, and plant based fats. While there is room in a healthy diet for treats, added sugar should be eaten sparingly. Aim for a variety of foods, and balance.
+  utter_ask_ :
+  - text: What kind of exercise did you do?
+
+  utter_ask_diet:
+  - text: Did you stick to a healthy diet 🥦 yesterday?
+
+  utter_ask_stress:
+  - text: Is your stress level low, medium or high 🧘🏼?
+
+  utter_ask_goal:
+  - text: Setting goals - even small ones - is a great way to focus your day. What do you want to accomplish today 🥇 ?
+
+  utter_slots_value:
+  - text: "Here's your daily wellness log:\n
+            - Exercised?: {confirm_exercise}\n
+            - Type of exercise: {exercise}\n
+            - Sleep: {sleep}\n
+            - Stuck to a healthy diet?: {diet}\n
+            - Stress level: {stress}\n
+            - Goal: {goal}"
+
+  utter_no_worries:
+  - text: No Problem :)
+
+  utter_ask_continue:
+  - text: Sorry, I don't quire understand. Do you want to continue?
+
+forms:
+  health_form:
+    confirm_exercise:
+    - type: from_intent
+      intent: inform
+      value: true
+    - type: from_intent
+      intent: affirm
+      value: true
+    - type: from_intent
+      intent: deny
+      value: false
+    exercise:
+    - type: from_entity
+      entity: email
+    sleep:
+    - type: from_entity
+      entity: sleep
+    - type: from_intent
+      intent: deny
+      value: "None"
+    diet:
+    - type: from_text
+      intent: inform
+    - type: from_text
+      intent: affirm
+    - type: from_text
+      intent: deny
+    stress:
+    - type: from_entity
+      entity: stress
+    goal:
+    - type: from_text
+      intent: inform
 
 session_config:
   session_expiration_time: 60

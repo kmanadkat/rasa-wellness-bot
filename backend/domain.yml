@@ -88,6 +88,9 @@ responses:
   utter_ask_continue:
   - text: Sorry, I don't quire understand. Do you want to continue?
 
+actions:
+- validate_health_form
+
 forms:
   health_form:
     confirm_exercise:

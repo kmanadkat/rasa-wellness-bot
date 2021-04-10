@@ -1,6 +1,6 @@
 # Wellness Check Rasa ChatBot
 [![Python](https://img.shields.io/badge/Python-3.7.9-blue.svg?style=?style=flat-square&logo=python)](https://www.python.org/downloads/release/python-379)
-[![Rasa](https://img.shields.io/badge/Rasa%20Open%20Source-2.4.3-pruple.svg?style=flat-square)](https://rasa.com/docs/rasa/)
+[![Rasa](https://img.shields.io/badge/Rasa%20Open%20Source-2.4.3-purple.svg?style=flat-square)](https://rasa.com/docs/rasa/)
 
 This is rasa based chatbot. User is asked several health related questions and at the end the logs are shared back to the user. This project demonstrates how easy it is to create NLP based chatbots with rasa opensource sdk. It mainly consists of a Form and Custom Actions. A beginner friendly scope was kept so that any one looking for getting started, could refer this.
 

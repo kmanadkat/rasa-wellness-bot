@@ -1,31 +1,17 @@
 version: "2.0"
 
 rules:
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
 - rule: Activate health_form
   steps:
   - intent: affirm
   - action: health_form
   - active_loop: health_form
 
-- rule: Deactivate health_form
+- rule: Submit health_form
   condition:
   - active_loop: health_form
   steps:
   - action: health_form
   - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
   - action: utter_slots_value
-  - intent: thankyou
-  - action: utter_no_worries
-  - action: utter_goodbye
+  - action: action_restart

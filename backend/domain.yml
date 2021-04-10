@@ -55,22 +55,22 @@ responses:
   utter_iamabot:
   - text: I am just another bot trying to help you.
 
-  utter_ask_confirm_exercise:
+  utter_ask_health_form_confirm_exercise:
   - text: Did you exercise yesterday? Don't sweat it if you didn't run a marathon - walks count!
 
-  utter_ask_sleep:
+  utter_ask_health_form_sleep:
   - text: How much sleep did you get 💤 last night?
 
-  utter_ask_ :
+  utter_ask_health_form_exercise :
   - text: What kind of exercise did you do?
 
-  utter_ask_diet:
+  utter_ask_health_form_diet:
   - text: Did you stick to a healthy diet 🥦 yesterday?
 
-  utter_ask_stress:
+  utter_ask_health_form_stress:
   - text: Is your stress level low, medium or high 🧘🏼?
 
-  utter_ask_goal:
+  utter_ask_health_form_goal:
   - text: Setting goals - even small ones - is a great way to focus your day. What do you want to accomplish today 🥇 ?
 
   utter_slots_value:
@@ -102,7 +102,7 @@ forms:
       value: false
     exercise:
     - type: from_entity
-      entity: email
+      entity: exercise
     sleep:
     - type: from_entity
       entity: sleep

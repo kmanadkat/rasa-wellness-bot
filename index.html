@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- COMMON TAGS -->
+  <meta charset="utf-8">
+  <title>Wellness Chatbot - Built with Rasa</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,500,600" rel="stylesheet">
+  <link rel="stylesheet" href="./demo/assets/css/main.css">
+  <link rel="stylesheet" href="./demo/assets/css/prism.css">
+
+  <link rel="stylesheet" href="./demo/assets/css/Chatroom.css"/>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./demo/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./demo/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./demo/favicon-16x16.png">
+  <link rel="manifest" href="./demo/site.webmanifest">
+  
+</head>
+<body data-spy="scroll" data-target="#scrollList" data-offset="-10" id="chatbot-body">
+  <header>
+    <nav class="navbar navbar-expand-lg flex-column flex-sm-row navbar-dark bg-darker fixed-top shadow-sm fixed-top" id="myscrolling_nav">
+      <div class="container">
+        <a class="navbar-brand font-weight-bold" href="#"> <img src="./demo/assets/imgs/Bot-icon.png" height="36" alt=""> &nbsp;&nbsp; Wellness Chatbot</a>
+        <div class="navbar-nav-scroll ml-md-auto">
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item mx-4 mx-sm-4 mx-md-5 active"><a class="nav-link" href="#">Docs</a></li>
+            <li class="nav-item mx-4 mx-sm-4 ml-md-5"><a class="nav-link" title="Github Docs" target="_blank" href="https://github.com/kmanadkat/rasa-wellness-bot">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="docs-main mt-5">
+    <div class="container py-5" id="introduction">
+      <div class="row mt-5 justify-content-around px-2 px-sm-0">
+        <div class="col-sm-6 col-md-3 mt-5">
+
+          <!-- <div class="chat-container sticky-top mt-4" id="scrollList"></div> -->
+          <video height="590" autoplay loop muted>
+            <source src="./demo/assets/wellness-bot.mp4" type="video/mp4" />
+          </video>
+
+        </div>
+        <div class="col-sm-6 col-md-7 offset-md-2 scrollspy-example" id="docs-writeup">
+          <!--========================================== Introduction ==========================================-->
+          <div style=" margin-top: 4rem;">
+            <h2>Introduction
+              <a class="ml-2 linking" href="#introduction"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a>
+            </h2>
+            <hr>
+            <p><span class="font-weight-bold">Wellness chatbot</span> &mdash; is an information logging chatbot. It is built on top of Python with the help of Rasa Open Source framework. It is an open source machine learning framework for automated text and voice-based conversations. Understand messages, hold conversations, and connect to messaging channels and APIs. Out of the box it supports integration with Messenger, Slack, Twilio & custom website.</p>
+            <div class="p-2 alert alert-info mt-4">
+              <span class="float-right mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package"><path d="M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.1-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.78 0z"></path><polyline points="2.32 6.16 12 11 21.68 6.16"></polyline><line x1="12" y1="22.76" x2="12" y2="11"></line><line x1="7" y1="3.5" x2="17" y2="8.5"></line></svg></span>
+              <ul class="feature-list mt-2">
+                <li>Natural Language Processing Based</li>
+                <li>Works with Python 3.6.x & Python 3.7.x</li>
+                <li>Rasa Open Source 2.4.3</li>
+                <li>Tensorflow & Spacy</li>
+                <li>Easily integrate with Web</li>
+              </ul>
+            </div>
+          </div>
+
+          <!--========================================== Installation ==========================================-->
+          <div id="installation" class="doc-section">
+            <h2>Installation
+              <a class="ml-2 linking" href="#installation"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a>
+            </h2>
+            <hr>
+            <p>It is recommended to use Python 3.6 or Python 3.7 with rasa framework. Below are the steps to run this project.
+              <ul class="list-unstyled">
+              <li class="py-1">- Clone <a href="https://github.com/kmanadkat/rasa-wellness-bot">master branch</a> of this repository & open root directory in terminal.</li>
+              <li class="py-1">- Create & activate virtual env with python. After that install rasa opensource</li>
+              <div class="code-container">
+<pre class="language-markup scrollbar scroll-style" id="code-1">
+<code>$ python3.7 -m venv ./venv
+$ source ./venv/bin/activate
+$ pip install rasa</code></pre></div>
+                <li class="py-1"></li>
+                <li class="py-1">- With the setup done you can now run rasa commands described below.</li>
+                <li class="py-1">- You need to generate trained model first. In backend directory & run rasa train.</li>
+                <div class="code-container">
+<pre class="language-markup scrollbar scroll-style" id="code-1">
+<code>$ cd backend
+$ rasa train</code></pre></div>
+                <li class="py-1">- Trained model can be found at backend>models> directory.</li>
+                <li class="py-1">- After training is done, for custom actions to work run actions server.</li>
+                <li class="py-1">- Finally, in a seperate terminal tab run rasa nlu model server.</li>
+                <div class="code-container">
+<pre class="language-markup scrollbar scroll-style" id="code-1">
+<code>$ rasa run actions --cors "*" --debug
+$ rasa run -m models --enable-api --cors "*" --debug</code></pre></div>
+            </ul>
+              </p>
+          </div>
+
+          <!--========================================== screenshots ==========================================-->
+          <div id="screenshots" class="doc-section">
+            <h2>Training & Running Chatbot
+              <a class="ml-2 linking" href="#screenshots"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a>
+            </h2>
+            <hr>
+            <p>Training rasa model</p>
+            <img src="../images/01 rasa-train-success.png" width="100%" alt="">
+            <p class="mt-4">Running rasa actions server</p>
+            <img src="../images/02 rasa-run-actions-success.png" width="100%" alt="">
+            <p class="mt-4">Running bot in terminal - flow 1 - affirmed for exercise</p>
+            <img src="../images/03 rasa-shell-happy-flow.png" width="100%" alt="">
+            <p class="mt-4">Running bot in terminal - flow 2 - denied for exercise</p>
+            <img src="../images/04 rasa-shell-happy-flow-no-exercise.png" width="100%" alt="">
+            <p class="mt-4">Running bot in terminal - flow 3 - going out of scope & coming back</p>
+            <img src="../images/05 rasa-shell-sad-path-1.png" width="100%" alt="">
+            <p class="mt-4">Running bot in terminal - flow 4 - going out of scope & terminating process</p>
+            <img src="../images/06 rasa-shell-sad-path-2.png" width="100%" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-darker py-2">
+    <p class="pt-3 text-center text-white"><a href="#chatbot-body">Back to top</a></p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="./demo/assets/js/clipCopy.js"></script>
+  <script src="./demo/assets/js/prism.js"></script>
+  
+  <script src="./demo/navonscroll.js"></script>
+  <script src="./demo/assets/js/Chatroom.js"></script>
+  <script>
+    hide_on_scroll({
+      nav_id: 'myscrolling_nav',
+      hide_onscroll_mobile : true,
+      nav_offset : 10
+    });
+  </script>
+
+  <!-- <script type="text/javascript">
+    var chatroom = new window.Chatroom({
+      host: "http://localhost:5005",
+      title: "Wellness Chatbot",
+      container: document.querySelector(".chat-container"),
+      welcomeMessage: "I like to log your daily health and wellness logging chatbot. 👋 Greet me with hello to get started.",
+      speechRecognition: "en-US",
+      waitingTimeout: 2000
+    });
+    chatroom.openChat();
+  </script> -->
+</body>
+</html>

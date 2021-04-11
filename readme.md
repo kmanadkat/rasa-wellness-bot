@@ -33,6 +33,17 @@ Below command loads the trained model, opens communication to custom actions run
 rasa shell
 ```
 
+Once you have developed your bot and you are ready to integrate the bot with the UI, you can start the Rasa server using the below command
+```shell
+rasa run -m models --enable-api --cors "*" --debug
+```
+
+If you have custom actions, you can start the action server using the below command
+```shell
+rasa run actions --cors "*" --debug
+```
+Once you have you Rasa server up and running, you can test the bot by running the index.html file in the browser.
+
 ## Chatbot Screenshots
 
 **rasa train**

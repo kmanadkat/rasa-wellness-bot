@@ -4,6 +4,8 @@
 
 This is rasa based chatbot. User is asked several health related questions and at the end the logs are shared back to the user. This project demonstrates how easy it is to create NLP based chatbots with rasa opensource sdk. It mainly consists of a Form and Custom Actions. A beginner friendly scope was kept so that any one looking for getting started, could refer this.
 
+[Demo](https://kmanadkat.github.io/rasa-wellness-bot/)
+
 ## Setup and Installation
 It is recommended to use Python 3.6 or Python 3.7 with rasa framework. Below are the steps to run this project.
 
